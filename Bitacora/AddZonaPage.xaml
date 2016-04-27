@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="Bitacora.AddZonaPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Bitacora"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          Padding="10"
+          >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Margin="0 0 0 30">
+            <TextBlock Text="Bitacora"
+                       Style="{StaticResource TitleTextBlockStyle}"
+                       />
+            <TextBlock Text="Agregar Lugar"
+                       Style="{StaticResource HeaderTextBlockStyle}"
+                       />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1">
+            <TextBox x:Name="nombre" PlaceholderText="nombre" Margin="0 0 0 15"/>
+            <TextBox x:Name="descripcion" PlaceholderText="descripcion" Margin="0 0 0 15"/>
+            <TextBox x:Name="direccion" PlaceholderText="direccion" Margin="0 0 0 15"/>
+            <Button Content="Seleccionar Imagen" HorizontalAlignment="Stretch" Margin="0 0 0 15"
+                    Click="Button_Image"
+                    />
+            <Image 
+                
+                x:Name="imagen"
+                Stretch="UniformToFill"
+                Height="140"/>
+
+
+        </StackPanel>
+
+        <Button Grid.Row="2" 
+                Content="Guardar" 
+                HorizontalAlignment="Stretch"
+                Background="GreenYellow"
+                Click="Button_Save"
+                />
+
+
+
+    </Grid>
+</Page>
