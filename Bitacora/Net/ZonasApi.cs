@@ -72,12 +72,6 @@ namespace Bitacora.Net
             byte[] data = new byte[buffer.Length];
             reader.ReadBytes(data);
 
-
-            //BitmapDecoder decoder = await BitmapDecoder.CreateAsync(random);
-            
-            //PixelDataProvider pixelData = await decoder.GetPixelDataAsync();
-            //byte[] imgD = pixelData.DetachPixelData();
-
             return Convert.ToBase64String(data);
         }
 
