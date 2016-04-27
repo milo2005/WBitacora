@@ -73,7 +73,7 @@ namespace Bitacora
                 root.GoBack();
             }
             else {
-                MessageDialog dialog = new MessageDialog("could not open the folder?", "Information");
+                MessageDialog dialog = new MessageDialog("No se pudo guardar la zona", "Error");
                 await dialog.ShowAsync();
             }
 
